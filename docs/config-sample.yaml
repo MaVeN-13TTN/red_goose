@@ -1,0 +1,39 @@
+# Red-Goose Configuration File
+# Place this file at ~/.red-goose.yaml
+
+download:
+  # Default video quality (best, worst, 720p, 1080p, etc.)
+  default_quality: "best"
+  
+  # Maximum number of concurrent downloads
+  max_workers: 3
+  
+  # Skip videos that fail to download
+  skip_errors: false
+  
+  # Download audio only by default
+  audio_only: false
+
+output:
+  # Default download directory
+  directory: "./downloads"
+  
+  # Create subfolders for playlists
+  create_subfolders: true
+  
+  # File naming pattern
+  # Available variables: {title}, {author}, {id}, {quality}
+  naming_pattern: "{title}"
+
+network:
+  # Timeout for downloads (seconds)
+  timeout_seconds: 1800
+  
+  # Number of retry attempts
+  retries: 3
+  
+  # User agent string
+  user_agent: "red-goose/1.0"
+  
+  # Rate limiting between requests (milliseconds)
+  rate_limit_ms: 100
